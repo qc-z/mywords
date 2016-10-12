@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            width: 400px;
+            margin:50px;
+        }
+        #demo {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<span id="demo"></span>
+<div id="test">我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字我要复制的文字</div>
+<div id="another">
+    我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字 我不要的文字
+</div>
+</body>
+</html>
+<script>
+    function $(id){return document.getElementById(id)};
+    var demo = $("demo");
+    var test = $("test");
+    test.onmouseup = function(event){
+        var event = event || window.event;
+        var x = event.clientX;
+        var y = event.clientY;
+        var txt;
+        if(window.getSelection){
+            txt = window.getSelection().toString();
+        }
+        else{
+            txt = document.selection.createRange().text;
+        }
+        if(txt){
+            show(txt,x,y);
+        }
+
+    }
+    document.onmousedown = function(event){
+        var event = event || window.event;
+        var targetId = event.target?event.target.id:event.srcElement.id;
+        if(targetId !="demo"){
+            demo.style.display = "none";
+        }
+    }
+
+    function show(contantText,mouseX,mouseY){
+       setTimeout(function(){
+           demo.style.display = "block";
+           demo.style.left = mouseX + "px";
+           demo.style.top = mouseY + "px";
+           demo.innerHTML = contantText;
+       },300);
+
+    }
+
+
+</script>

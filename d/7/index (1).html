@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+<style>
+   #box{
+       width: 512px;
+       height: 400px;
+       position: relative;
+       border: 1px solid red;
+       margin: 100px auto;
+       overflow: hidden;
+   }
+    #box span{
+        width: 100%;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+    }
+    #up{
+        top: 0;
+
+    }
+    #down{
+        bottom: 0;
+
+    }
+   #pic {
+       position: absolute;
+       top: 0;
+       left: 0;
+   }
+</style>    
+</head>
+
+<body>
+<div id="box">
+    <img src="mi.png" alt="" id="pic"/>
+    <span id="up"></span>
+    <span id="down"></span>
+</div>
+</body>
+</html>
+<script>
+    function $(id) {return document.getElementById(id);}
+    var timmer = null;
+    var num = 0;
+    $("up").onmouseover = function(){
+        clearInterval(timmer);
+        timmer = setInterval(function(){
+            num -= 3;
+            num>=-1070?$("pic").style.top = num+"px" :clearInterval(timmer);
+        },30);
+    }
+
+    $("down").onmouseover = function(){
+        clearInterval(timmer);
+        timmer = setInterval(function(){
+            num++;
+            num<0?$("pic").style.top = num+"px" :clearInterval(timmer);
+        },30)
+    }
+    $("up").parentNode.onmouseout = function(){
+        clearInterval(timmer);
+    }
+</script>

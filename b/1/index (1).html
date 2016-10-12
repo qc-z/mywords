@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<style>
+    body{
+        background-color:red;
+    }
+</style>
+<script>
+    window.onload = function (){
+        var sele = document.getElementById("sele");
+        sele.onchange = function(){
+            switch (this.value){
+                case "1":
+                    document.body.style.backgroundColor = "red";
+                    break;
+                case "2":
+                    document.body.style.backgroundColor = "green";
+                    break;
+                case "3":
+                    document.body.style.backgroundColor = "blue";
+                    break;
+                case "4":
+                    document.body.style.backgroundColor = "yellow";
+                    break;
+
+            }
+        }
+    }
+</script>
+<body>
+<select name="sel" id="sele">
+    <option value="1">红</option>
+    <option value="2">绿</option>
+    <option value="3">蓝</option>
+    <option value="4">黄</option>
+</select>
+</body>
+</html>

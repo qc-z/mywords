@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<script>
+    window.onload = function(){
+        function $(id){
+            return document.getElementById(id);
+        }
+        $("btn").onclick = function(){
+            if($("age").value>=5){
+                $("newmoney").value=($("money").value)*1.2;
+            }else if($("age").value>=2 || $("age").value<=4){
+                $("newmoney").value=($("money").value)*1.15;
+            }else if($("age").value<2){
+                $("newmoney").value=($("money").value)*1.1;
+            }else{
+                alert("操你妈");
+            }
+        }
+    }
+</script>
+<body>
+<div>
+    工龄：<input type="text" id="age"/>  <br>
+    工资：<input type="text" id="money"/> <br>
+    <button id="btn">计算</button>  <br>
+    调整后的工资：<input type="text" id="newmoney"/>
+</div>
+</body>
+</html>

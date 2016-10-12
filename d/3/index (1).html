@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 300px;
+        }
+        li {
+            line-height: 30px;
+            list-style-type: none;
+        }
+        li span {
+            margin:5px;
+        }
+        .curren{
+            background-color: #cccccc;
+        }
+    </style>
+
+</head>
+<script>
+    window.onload = function(){
+        var lis = document.getElementsByTagName("li");
+        for(i=0;i<lis.length;i++){
+            lis[i].onmousemove = function (){
+                this.className = "curren";
+            }
+            lis[i].onmouseout = function (){
+                this.className = "";
+            }
+        }
+    }
+</script>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+        <li>
+            <span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

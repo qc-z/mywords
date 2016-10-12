@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {margin: 0;padding: 0;}
+        body {
+            perspective: 700px;
+        }
+        ul {list-style: none;}
+        ul {
+            width: 200px;
+            height: 200px;
+            /*background-color: pink;*/
+            margin: 100px auto;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 2s;
+            transform: scaleX(2.5) scaleY(1.5) rotateX(0deg);
+
+        }
+
+        ul li {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 200px;
+            font-size: 40px;
+            color: white;
+            position: absolute;
+            -webkit-background-size: cover;
+
+        }
+        ul li:nth-child(1) {
+            transform: rotateX(0deg) translateZ(100px);
+            background: url(images/1.jpg) no-repeat;
+            background-size: cover;
+
+        }
+        ul li:nth-child(2) {
+            transform: rotateX(-90deg) translateZ(100px);
+            background: url(images/2.jpg) no-repeat;
+            background-size: cover;
+
+        }
+
+        ul li:nth-child(3) {
+            transform: rotateX(-180deg) translateZ(100px);
+            background: url(images/3.jpg) no-repeat;
+            background-size: cover;
+
+        }
+        ul li:nth-child(4) {
+            transform: rotateX(-270deg) translateZ(100px);
+            background: url(images/4.jpg) no-repeat;
+            background-size: cover;
+
+        }
+        span {
+            width: 40px;
+            height: 40px;
+            border-right: 3px solid black;
+            border-top: 3px solid black;
+            position: absolute;
+            top: 250px;
+            left: 600px;
+        }
+        .pre {
+            transform: rotate(-135deg);
+            top: 80px;
+            left: 420px;
+        }
+        .next {
+            transform: rotate(45deg);
+            top: 80px;
+            left: 880px;
+        }
+
+    </style>
+     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+         <script>
+             $(document).ready(function () {
+//                     alert(1111)
+                 var num = 0;
+                 $(".pre").stop().on("click", function () {
+                        num--;
+                     $("ul").css("transform", "scaleX(2.5) scaleY(1.5) rotateX("+num*90+"deg)")
+                 })
+                 $(".next").stop().on("click", function () {
+                        num++;
+                     $("ul").css("transform", "scaleX(2.5) scaleY(1.5) rotateX("+num*90+"deg)")
+                 })
+             });
+         </script>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<span class="pre"></span>
+<span class="next"></span>
+</body>
+</html>

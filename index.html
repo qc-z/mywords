@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>原生js的研究与探索和一些联系案例</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
+</head>
+<body>
+
+
+<div class="wrap shadow">
+    <ol id="ol" class="list">
+
+    </ol>
+</div>
+
+<script type="text/javascript">
+    var str = '',
+        data = [
+            [
+                { title : '第一章 表单常用代码'},
+                { url : 'a/1/index (1).html', title : 'ajax百度搜索框' },
+                { url : 'a/2/index (1).html', title : '点击隐藏文字搜索框' },
+                { url : 'a/3/index (1).html', title : '根据工龄计算工资' },
+                { url : 'a/4/index (1).html', title : '全选和反选' },
+                { url : 'a/5/index (1).html', title : '拖拽案例' },
+                { url : 'a/6/index (1).html', title : '垂直滚动条' },
+                { url : 'a/7/index (1).html', title : '仿淘宝搜索框' },
+                { url : 'a/8/index (1).html', title : '两个小表单' },
+                { url : 'a/9/index (1).html', title : '星座运势' }
+            ],
+            [
+                { title : '第二章 常用图片相关代码'},
+                { url : 'b/1/index (1).html', title : '下拉菜单' },
+                { url : 'b/2/index (1).html', title : '轮播图' },
+                { url : 'b/3/index (1).html', title : '封闭包的tab切换' }
+
+            ],
+            [
+                { title : '第三章 定时器'},
+                { url : 'c/1/index (1).html', title : '5秒钟跳转' },
+                { url : 'c/2/index (1).html', title : '倒计时案例' },
+                { url : 'c/3/index (1).html', title : '发送短信' }
+            ],
+            [
+                { title : '第四章 常用动画'},
+                { url : 'd/1/index (1).html', title : '动画基本原理' },
+                { url : 'd/2/index (1).html', title : '封装动画终极版' },
+                { url : 'd/3/index (1).html', title : '隔行变色' },
+                { url : 'd/4/index (1).html', title : '滑动动画' },
+                { url : 'd/5/index (1).html', title : '屏幕滑动效果' },
+                { url : 'd/6/index (1).html', title : '鼠标经过显示大图' },
+                { url : 'd/7/index (1).html', title : '小米手机图片滚动' },
+                { url : 'd/8/index (1).html', title : '选定文字弹出层' },
+				{ url : 'd/9/index (1).html', title : '手风琴' }
+            ],
+            [
+                { title : '第五章 放大镜'},
+                { url : 'e/1/index (1).html', title : '放大镜' },
+                { url : 'e/2/index (1).html', title : '百度换肤' }
+            ],
+            [
+                { title : '第六章 其他'},
+                { url : 'g/1/index (1).html', title : '日期函数的小时钟' },
+                { url : 'g/2/index (1).html', title : '点击空白弹出层消失' },
+                { url : 'g/3/index (1).html', title : '浮现' },
+                { url : 'g/4/index (1).html', title : '微博发布' }
+            ],
+            [
+                { title : '第六章 css3'},
+                { url : 'h/1/index (1).html', title : '音乐导航栏' },
+                { url : 'h/2/index (1).html', title : '2d转换' },
+                { url : 'h/3/index (1).html', title : '鼠标方向' },
+                { url : 'h/4/index (1).html', title : '滚动导航栏' },
+                { url : 'h/5/index (1).html', title : '正方体' },
+                { url : 'h/6/index (1).html', title : '正方体相册' }
+            ],
+            [
+                { title : '第七章 瀑布流'},
+                { url : 'i/1/index (1).html', title : 'js瀑布流' },
+                { url : 'i/2/index (1).html', title : 'jquery瀑布流' }
+            ],
+            [
+                { title : '第七章 案例'},
+                { url : 'j/1/index (1).html', title : '互动派anli' }
+            ]
+        ];
+    for(var i = 0; i < data.length; i++){
+        var items = data[i];
+        var sub = '';
+        for(var j=0; j<items.length; j++){
+            var son = items[j];
+            if(j == 0){
+                sub += '<li><h1><a href="javascript:;" title="' + son.title + '">' + son.title + '</a></h1><dl class="sub-dl">';
+            } else {
+                sub += '<dd><a href="' + son.url + '" target="_blank" title="' + son.title + '">' + son.title + '</a></dd>';
+            }
+            if(j == items.length - 1){
+                sub += '</dl></li>';
+            }
+        }
+        str += sub;
+    }
+    var ol = document.getElementById('ol');
+    ol.innerHTML = str;
+    var h1 = ol.getElementsByTagName('h1');
+    var dl = ol.getElementsByTagName('dl');
+    var tmp = -1;
+    var open = false;
+    for(var i=0; i < h1.length; i++){
+        h1[i].index = i;
+        h1[i].onclick = function(){
+            for(var i=0; i<h1.length; i++){
+                dl[i].style.display = 'none';
+            }
+            if(tmp == this.index && open){
+                dl[this.index].style.display = 'none';
+                open = false;
+            } else {
+                dl[this.index].style.display = 'block';
+                open = true;
+            }
+            tmp = this.index;
+        }
+    }
+
+</script>
+</body>
+</html>

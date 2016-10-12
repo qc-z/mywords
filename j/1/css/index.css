@@ -1,0 +1,419 @@
+html,body,ul,li {
+    margin: 0px;
+    padding: 0px;
+}
+ul,ol{
+    list-style: none;
+}
+.clearfix::before,
+.clearfix::after {
+    content:"";
+    visibility:hidden;
+    height:0;
+    line-height:0;
+    clear:both;
+    display:block;
+}
+.box {
+    width: 100%;
+
+}
+.header {
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: white;
+}
+.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.headerlogo {
+    margin-top: 20px;
+    height: 70px;
+    width: 400px;
+
+}
+.logo {
+    height: 37px;
+    background: url(../images/logo.png) no-repeat top left;
+
+}
+
+.header .header_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 700px;
+    margin-right: 1px;
+    margin-top: 30px;
+}
+
+.header_menu li {
+    float: left;
+    width: 90px;
+    height: 30px;
+    margin-right: 10px;
+    position: relative;
+}
+.header_menu li ul {
+
+}
+
+
+.header_menu a {
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.header_menu span {
+    cursor: pointer;
+    display:inline-block;
+    width:auto;
+    height:20px;
+    /*margin-bottom:30px;*/
+
+}
+
+.header_menu li ul {
+    display: none;
+    z-index: 10;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    top: 30px;
+    left: -30px;
+    margin-top:10px;
+
+}
+
+
+.current {
+    background-color: orange;
+}
+
+/*scroll*/
+
+
+.jd_banner{
+    width: 100%;
+    height:600px;
+    position: relative;
+    overflow: hidden;
+}
+.jd_banner ul:first-child{
+    width: 1000%;
+    position:absolute;
+    top:0;
+    left:0;
+
+}
+.jd_banner ul:first-child li{
+    width: 10%;
+    float: left;
+
+}
+.jd_banner ul:first-child li img{
+    width: 100%;
+    height:600px;;
+}
+
+.jd_banner ul:last-child{
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 118px;
+    margin-left: -59px;
+
+}
+
+.jd_banner ul:last-child li{
+    width: 6px;
+    height: 6px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    margin-left: 10px;
+    z-index: 999;
+    float: left;
+}
+.jd_banner ul:last-child li:first-child{
+    margin-left: 0;
+}
+.jd_banner ul:last-child li.now{
+    background: #fff;
+}
+
+/*#slider img{*/
+    /*width: 100%;*/
+/*}*/
+/*.circle {*/
+    /*position: absolute;*/
+    /*bottom:8px;*/
+    /*left: 50%;*/
+/*}*/
+/*.circle li {*/
+    /*width: 18px;*/
+    /*height: 18px;*/
+    /*border-radius: 50%;*/
+    /*background-color: #3E3E3E;*/
+    /*float: left;*/
+    /*text-align: center;*/
+    /*line-height: 18px;*/
+    /*color: #fff;*/
+    /*margin: 0 5px;*/
+    /*cursor: pointer;*/
+/*}*/
+/*.circle li.current {*/
+    /*background-color: red;*/
+/*}*/
+
+
+
+/*�������*/
+.clearfloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+.clearfloat {
+    z-index: 1;
+}
+
+/*slider*/
+.title{
+    height: 50px;
+    width: 100%;
+    /*background-color: pink;*/
+    text-align: center;
+    line-height: 50px;
+}
+.title .item {
+        padding-bottom:7px ;
+        border-bottom: 2px solid #da251c;
+}
+
+
+.slidermain{
+    width: 1000px;
+    height: 500px;
+    margin: 5px auto;
+    position: relative;
+}
+.l {
+    width: 490px;
+    height: 500px;
+    float: left;
+
+}
+.r {
+    width: 500px;
+    height: 500px;
+    float: right;
+
+}
+.t{
+    width: 500px;
+    height: 240px;
+    margin-bottom: 20px;
+}
+.b{
+    width: 500px;
+    height: 240px;
+}
+
+.l1,.rl,.l2,.r2,.r img {
+    width: 240px;
+    height: 240px;
+}
+.l1,.l2 {
+    float: left;
+}
+.r1,.r2 {
+    float: right;
+}
+
+.pre,.next{
+    position: absolute;
+    top: 50%;
+
+}
+.pre{
+    left: -90px;
+}
+.next {
+    right: -90px;
+}
+
+
+/**/
+.showbox {
+    text-align: center;
+    position: relative;
+}
+#l,#b,#r {
+    width: 360px;
+    height: 270px;
+    display: inline-block;
+    background: url("../images/pro1.png");
+    margin-left: 20px;
+    box-shadow: 0 0 10px black;
+
+}
+#l div,#b div,#r div {
+    display: none;
+}
+#b {
+     background-image: url("../images/pro2.png");
+ }
+#r {
+       background-image: url("../images/pro3.png");
+   }
+
+#l img,#b img,#r img {
+    width: 360px;
+    height: 270px;
+}
+
+
+
+
+    /**/
+
+#footsliderbox img{
+    vertical-align: top;
+}
+#footsliderbox{
+    width: 920px;
+    height: 140px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+#footsliderbox ul {
+    width: 400%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#footsliderbox ul li{
+    float: left;
+    margin-left: 30px;
+}
+
+
+
+
+/*��ť*/
+.item1 {
+    position: relative;
+}
+.footpre{
+    position: absolute;
+    left: 160px;
+    top: -200px;
+
+}
+.footnext{
+    position: absolute;
+    right: -1200px;
+    top: -200px;
+
+}
+
+
+
+/*banner*/
+.sliderbox img{
+    vertical-align: top;
+}
+.sliderbox{
+    width: 920px;
+    height: 80px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+}
+.sliderbox ul {
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.sliderbox ul li{
+    float: left;
+    margin-left: 10px;
+}
+
+
+/*friendlink*/
+.friendlink {
+    background-color: #4a4a4a;
+    height: 380px;
+}
+.friendlink li {
+    cursor: pointer;
+}
+.footbox {
+    margin-left: 180px;
+}
+.div1,.div2,.div3,.div4,.div5,.div6{
+    float: left;
+    margin-top: 50px;
+}
+.div2,.div3,.div4,.div5,.div6{
+    width: 120px;
+    margin-left: 30px;
+}
+.div2 {
+    margin-left: 40px;
+}
+.div1 {
+    color: #ff1930;
+}
+.div6 {
+    width: 240px;
+}
+.item1 {
+    border-bottom: 2px solid #cccccc;
+    padding-bottom: 10px;
+    display: inline-block;
+
+}
+.item2 {
+    font: 12px "����";
+    color: #c3c3c3;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.footbox img {
+    padding-right: 2px;
+}
+.div2 span,
+.div3 span,
+.div4 span,
+.div5 span,
+.div6 span{
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.div2 li,
+.div3 li,
+.div4 li,
+.div5 li,
+.div6 li{
+    color: #c3c3c3;
+    margin-bottom: 10px;
+    font: 12px/24px '΢���ź�';
+}

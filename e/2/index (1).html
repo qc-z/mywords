@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>百度换肤</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background: url(images/2.jpg) top center;
+    }
+    #image{
+        height: 200px;
+        text-align: center;
+        margin-top: 50px;
+    }
+    #image img{
+        cursor: pointer;
+    }
+</style>
+<script>
+    window.onload = function () {
+        var image1 = document.getElementById("image1");
+        var image2 = document.getElementById("image2");
+        var image3 = document.getElementById("image3");
+        image1.onclick = function(){
+            box.style.background = "url(images/1.jpg)";
+        }
+        image2.onclick = function(){
+            box.style.background = "url(images/2.jpg)";
+        }
+        image3.onclick = function(){
+            box.style.background = "url(images/3.jpg)";
+        }
+    }
+</script>
+<body id="box">
+<div id="image">
+        <img src="images/1.jpg" alt="" id="image1" width="150px"/>
+        <img src="images/2.jpg" alt="" id="image2" width="150px"/>
+        <img src="images/3.jpg" alt="" id="image3" width="150px"/>
+</div>
+</body>
+</html>

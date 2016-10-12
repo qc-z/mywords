@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>倒计时</title>
+    <style>
+        #box{
+            font-size: 40px;
+            text-align: center;
+            color: red;
+
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            setInterval(time,1000);                                         //每隔1000毫秒调用time函数
+            var box = document.getElementById("box");
+            var endTime = new Date("2016/08/26 12:00:00");                   //定义最终时间
+
+            function time(){
+
+                var nowTime = new Date();                               //获得现在时间
+                var seconds = parseInt((endTime-nowTime)/1000);         //离自定义日期的秒数
+                var d = parseInt(seconds/3600/24);                      //得到天数
+//                alert(d);
+                var h = parseInt(seconds/3600%24);                      //得到小时数
+//                alert(h);
+                var m = parseInt(seconds/60%60);                        //得到分钟数
+//                alert(m);
+                var s = seconds%60;
+//                alert(s)；
+                d<10?d="0"+d :d;                //如果结果小于
+                h<10?h="0"+h :h;
+                m<10?m="0"+m :m;
+                s<10?s="0"+s :s;
+                box.innerHTML = "距离抢购还剩："+d+"天 "+h+"小时 "+m+"分钟 "+s+"秒";
+            }
+            time();
+        }
+    </script>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
