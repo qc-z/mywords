@@ -5,7 +5,7 @@
 .list li h1{font-size:22px; font-style:normal; font-family:"Hiragino Sans GB","Hiragino Sans GB W3",'微软雅黑';}
 .list li a{ display:block; padding:5px 8px;transition:all 0.6s;}
 .list li a:hover{text-indent:25px; border-radius:5px;color: #fff;text-shadow:0 2px 1px #360;text-decoration:none;}
-.list li h1 a:hover{ border-radius:5px;color: #fff;text-shadow:0 2px 1px #360;background-color: #393;text-decoration:none;}
+.list li h1 a:hover{ border-radius:5px;color: #fff;text-shadow:0 2px 1px #360;background-color: #360;text-decoration:none;}
 .sub-dl{ display:none;}
 .sub-dl a{ margin-left:25px;}
 .sub-dl a:hover{}
