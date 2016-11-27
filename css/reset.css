@@ -11,7 +11,7 @@ textarea{resize:none}
 address,caption,cite,code,dfn,em,i,th,var{font-style:normal;font-weight:normal;}
 legend{color:#000;}
 abbr,acronym{border:0;font-variant:normal;}
-a{color:#0a8cd2;text-decoration:none;}
+a{color:#000;text-decoration:none;}
 a:hover{ color:#f60;text-decoration:underline;}
 .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
 .clearfix{display:inline-block;}
@@ -22,7 +22,7 @@ a:hover{ color:#f60;text-decoration:underline;}
 .block{display:block;}
 .minheight500{min-height:500px;height:auto !important;height:500px;overflow:visible;}
 .wrap-box{width:960px;margin:0 auto;}
-.blue,.blue a:link,.blue a:visited{color:blue;}
+.blue,.blue a:link,.blue a:visited{color:green;}
 .blue a:hover{color:#f60;}
 .white,.white a:link,.white a:visited{color:#fff;}
 .white a:hover{color:#ff0;}
